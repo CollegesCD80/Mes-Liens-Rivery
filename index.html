@@ -19,8 +19,8 @@
                     fontFamily: { sans: ['Inter', 'sans-serif'] },
                     colors: {
                         quest: {
-                            blue: '#1E62B5', purple: '#C88B55', cyan: '#EAE6DF',
-                            dark: '#16181C', panel: 'rgba(30, 33, 39, 0.82)', card: 'rgba(234, 230, 223, 0.05)'
+                            blue: '#4E8A58', purple: '#26292E', cyan: '#78B882',
+                            dark: '#141618', panel: 'rgba(26, 29, 33, 0.84)', card: 'rgba(234, 230, 223, 0.05)'
                         }
                     }
                 }
@@ -30,24 +30,24 @@
 
     <style>
         body {
-            background-color: #16181C;
+            background-color: #141618;
             background-image: 
-                radial-gradient(at 12% 12%, rgba(200, 139, 85, 0.18) 0px, transparent 50%),
-                radial-gradient(at 88% 18%, rgba(30, 98, 181, 0.28) 0px, transparent 55%),
-                radial-gradient(at 50% 90%, rgba(234, 230, 223, 0.09) 0px, transparent 55%);
+                radial-gradient(at 15% 15%, rgba(78, 138, 88, 0.22) 0px, transparent 55%),
+                radial-gradient(at 85% 20%, rgba(38, 41, 46, 0.45) 0px, transparent 60%),
+                radial-gradient(at 50% 88%, rgba(120, 184, 130, 0.12) 0px, transparent 55%);
             background-attachment: fixed;
             min-height: 100vh;
             color: #EAE6DF;
         }
         .glass-panel {
-            background: rgba(30, 33, 39, 0.82);
+            background: rgba(26, 29, 33, 0.84);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(234, 230, 223, 0.14);
-            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.55);
+            border: 1px solid rgba(234, 230, 223, 0.13);
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.6);
         }
         .glass-card {
-            background: rgba(234, 230, 223, 0.045);
+            background: rgba(38, 41, 46, 0.55);
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
             border: 1px solid rgba(234, 230, 223, 0.11);
@@ -59,27 +59,27 @@
             outline: none;
         }
         .glass-card:hover {
-            background: rgba(234, 230, 223, 0.09);
-            border-color: rgba(200, 139, 85, 0.65);
+            background: rgba(38, 41, 46, 0.82);
+            border-color: rgba(120, 184, 130, 0.65);
             transform: translateY(-4px) scale(1.01);
-            box-shadow: 0 12px 30px -5px rgba(30, 98, 181, 0.35);
+            box-shadow: 0 12px 30px -5px rgba(78, 138, 88, 0.3);
         }
         .vr-btn { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
         .vr-btn:active { transform: scale(0.95); }
 
-        /* Style des boutons de catégories sans aucune ombre */
+        /* Style des boutons de catégories sans dégradé et sans ombre */
         .category-btn {
-            background: rgba(234, 230, 223, 0.05);
+            background-color: rgba(38, 41, 46, 0.65);
             backdrop-filter: blur(14px);
             border: 1px solid rgba(234, 230, 223, 0.12);
             transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .category-btn:hover {
-            background: rgba(234, 230, 223, 0.11);
-            border-color: rgba(46, 119, 208, 0.7);
+            background-color: rgba(38, 41, 46, 0.9);
+            border-color: rgba(120, 184, 130, 0.6);
         }
         .category-btn.active {
-            background: linear-gradient(135deg, rgba(30, 98, 181, 0.45) 0%, rgba(200, 139, 85, 0.3) 100%);
+            background-color: #4E8A58;
             border-color: #EAE6DF;
             color: #FFFFFF;
             font-weight: 800;
@@ -93,21 +93,21 @@
         <div class="max-w-[95rem] mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
             <div class="flex items-center gap-3.5 w-full md:w-auto justify-between md:justify-start">
                 <div class="flex items-center gap-3.5">
-                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-[#1E62B5] via-[#2E77D0] to-[#C88B55] flex items-center justify-center shadow-lg text-[#EAE6DF] text-2xl font-black shrink-0 border border-[#EAE6DF]/25">
+                    <div class="w-12 h-12 rounded-2xl bg-[#4E8A58] flex items-center justify-center shadow-lg text-[#EAE6DF] text-2xl font-black shrink-0 border border-[#EAE6DF]/25">
                         <i class="fa-solid fa-vr-cardboard"></i>
                     </div>
                     <div>
-                        <h1 class="text-lg md:text-xl font-extrabold tracking-wide text-[#EAE6DF]">
+                        <h1 class="text-lg md:text-xl font-extrabold tracking-wide text-[#88C492]">
                             Espace Ressources élèves
                         </h1>
                         <p class="text-sm text-[#D6CFC4] font-medium tracking-wide flex items-center gap-1.5 mt-0.5">
-                            <i class="fa-solid fa-school text-[#C88B55]"></i>
+                            <i class="fa-solid fa-school text-[#78B882]"></i>
                             <span>Collège Jules Verne - Rivery</span>
                         </p>
                     </div>
                 </div>
-                <div id="vr-clock-mobile" class="text-xs font-mono bg-[#EAE6DF]/5 border border-[#EAE6DF]/15 px-3 py-1.5 rounded-xl text-[#EAE6DF] md:hidden flex items-center gap-1.5 min-w-[110px] justify-center">
-                    <i class="fa-regular fa-clock text-[#C88B55]"></i>
+                <div id="vr-clock-mobile" class="text-xs font-mono bg-[#26292E]/80 border border-[#EAE6DF]/15 px-3 py-1.5 rounded-xl text-[#88C492] md:hidden flex items-center gap-1.5 min-w-[110px] justify-center">
+                    <i class="fa-regular fa-clock"></i>
                     <span class="clock-text">--:--:--</span>
                 </div>
             </div>
@@ -117,15 +117,15 @@
                 <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-[#B8B0A4] text-lg">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
-                <input type="text" id="searchInput" placeholder="Rechercher une ressource..." class="w-full pl-12 pr-10 py-3 rounded-2xl bg-[#16181C]/70 border border-[#EAE6DF]/15 text-[#EAE6DF] placeholder-[#9E9689] text-base focus:outline-none focus:border-[#2E77D0]">
+                <input type="text" id="searchInput" placeholder="Rechercher une ressource..." class="w-full pl-12 pr-10 py-3 rounded-2xl bg-[#26292E]/75 border border-[#EAE6DF]/15 text-[#EAE6DF] placeholder-[#9E9689] text-base focus:outline-none focus:border-[#78B882]">
                 <button id="clearSearch" class="hidden absolute inset-y-0 right-0 pr-4 flex items-center text-[#B8B0A4] hover:text-white">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
 
             <div class="flex items-center gap-3 w-full md:w-auto justify-end">
-                <div id="vr-clock-desktop" class="hidden md:flex text-xs font-mono bg-[#EAE6DF]/5 border border-[#EAE6DF]/15 px-3.5 py-2.5 rounded-xl text-[#EAE6DF] items-center gap-2 min-w-[125px] justify-center">
-                    <i class="fa-regular fa-clock text-[#C88B55]"></i>
+                <div id="vr-clock-desktop" class="hidden md:flex text-xs font-mono bg-[#26292E]/80 border border-[#EAE6DF]/15 px-3.5 py-2.5 rounded-xl text-[#88C492] items-center gap-2 min-w-[125px] justify-center">
+                    <i class="fa-regular fa-clock text-[#78B882]"></i>
                     <span class="clock-text">--:--:--</span>
                 </div>
             </div>
@@ -144,7 +144,7 @@
             <div id="bookmarkGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 justify-items-center"></div>
             <div id="emptyState" class="hidden flex-col items-center justify-center py-16 text-center glass-panel rounded-3xl mt-4">
                 <h3 class="text-xl font-bold text-[#EAE6DF] mb-1">Aucune ressource trouvée</h3>
-                <button id="btnResetFilters" class="vr-btn mt-4 px-5 py-2.5 bg-[#1E62B5]/25 text-[#EAE6DF] border border-[#2E77D0]/50 rounded-xl text-sm font-semibold">
+                <button id="btnResetFilters" class="vr-btn mt-4 px-5 py-2.5 bg-[#4E8A58]/25 text-[#88C492] border border-[#78B882]/50 rounded-xl text-sm font-semibold">
                     Réinitialiser les filtres
                 </button>
             </div>
@@ -253,13 +253,13 @@
                 card.className = 'glass-card rounded-3xl p-4 relative w-full';
                 
                 let iconHTML = `<span class="text-2xl">${item.icon || '🌐'}</span>`;
-                if (item.icon && item.icon.startsWith('fa-')) iconHTML = `<i class="fa-brands ${item.icon} text-2xl text-[#6BA6EB]"></i>`;
+                if (item.icon && item.icon.startsWith('fa-')) iconHTML = `<i class="fa-brands ${item.icon} text-2xl text-[#78B882]"></i>`;
 
                 card.innerHTML = `
                     <div>
                         <div class="flex items-start justify-between gap-2 mb-3">
-                            <div class="w-11 h-11 rounded-2xl bg-[#1E62B5]/20 border border-[#EAE6DF]/15 flex items-center justify-center shrink-0">${iconHTML}</div>
-                            <span class="text-[10px] font-bold px-2.5 py-1 rounded-xl bg-[#C88B55]/20 border border-[#C88B55]/35 text-[#EAE6DF] line-clamp-2 leading-tight text-right">${escapeHTML(item.category)}</span>
+                            <div class="w-11 h-11 rounded-2xl bg-[#141618]/75 border border-[#EAE6DF]/15 flex items-center justify-center shrink-0">${iconHTML}</div>
+                            <span class="text-[10px] font-bold px-2.5 py-1 rounded-xl bg-[#4E8A58]/20 border border-[#78B882]/35 text-[#88C492] line-clamp-2 leading-tight text-right">${escapeHTML(item.category)}</span>
                         </div>
                         <h3 class="text-sm font-bold text-[#EAE6DF] text-center mb-1.5 line-clamp-2 leading-snug min-h-[2.5rem]" title="${escapeHTML(item.title)}">${escapeHTML(item.title)}</h3>
                         <p class="text-[#B8B0A4] text-[11px] text-center leading-relaxed line-clamp-2 mb-2">${escapeHTML(item.description || '')}</p>
