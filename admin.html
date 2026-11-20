@@ -21,8 +21,8 @@
                     fontFamily: { sans: ['Inter', 'sans-serif'] },
                     colors: {
                         quest: {
-                            blue: '#2563eb', purple: '#c87d4b', cyan: '#38bdf8',
-                            dark: '#0f0e0d', panel: 'rgba(24, 21, 19, 0.85)'
+                            blue: '#1E62B5', purple: '#C88B55', cyan: '#EAE6DF',
+                            dark: '#14161A', panel: 'rgba(28, 31, 37, 0.86)'
                         }
                     }
                 }
@@ -32,43 +32,43 @@
 
     <style>
         body {
-            background-color: #0f0e0d;
+            background-color: #14161A;
             background-image: 
-                radial-gradient(at 15% 15%, rgba(200, 125, 75, 0.24) 0px, transparent 55%),
-                radial-gradient(at 85% 20%, rgba(168, 92, 48, 0.18) 0px, transparent 55%),
-                radial-gradient(at 50% 85%, rgba(29, 111, 214, 0.12) 0px, transparent 55%);
+                radial-gradient(at 15% 15%, rgba(200, 139, 85, 0.24) 0px, transparent 52%),
+                radial-gradient(at 85% 20%, rgba(30, 98, 181, 0.24) 0px, transparent 52%),
+                radial-gradient(at 50% 88%, rgba(234, 230, 223, 0.08) 0px, transparent 55%);
             background-attachment: fixed;
             min-height: 100vh;
-            color: #f5f2eb;
+            color: #EAE6DF;
         }
         .glass-panel {
-            background: rgba(24, 21, 19, 0.85);
+            background: rgba(28, 31, 37, 0.86);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(245, 242, 235, 0.12);
+            border: 1px solid rgba(234, 230, 223, 0.14);
             box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.6);
         }
         .glass-card {
-            background: rgba(245, 242, 235, 0.04);
+            background: rgba(234, 230, 223, 0.045);
             backdrop-filter: blur(14px);
-            border: 1px solid rgba(245, 242, 235, 0.09);
+            border: 1px solid rgba(234, 230, 223, 0.11);
             transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .glass-card:hover {
-            background: rgba(245, 242, 235, 0.09);
-            border-color: rgba(217, 138, 78, 0.55);
+            background: rgba(234, 230, 223, 0.09);
+            border-color: rgba(46, 119, 208, 0.65);
         }
         .vr-btn { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
         .vr-btn:active { transform: scale(0.95); }
 
         /* Hauteur réduite à 210px pour supprimer le scroll vertical */
         emoji-picker {
-            --background: rgba(24, 21, 19, 0.96);
-            --border-color: rgba(245, 242, 235, 0.12);
-            --input-border-color: rgba(245, 242, 235, 0.2);
-            --input-background: rgba(245, 242, 235, 0.05);
-            --input-text-color: #f5f2eb;
-            --indicator-color: #d98a4e;
+            --background: rgba(24, 27, 32, 0.96);
+            --border-color: rgba(234, 230, 223, 0.14);
+            --input-border-color: rgba(234, 230, 223, 0.22);
+            --input-background: rgba(234, 230, 223, 0.05);
+            --input-text-color: #EAE6DF;
+            --indicator-color: #2E77D0;
             width: 100%;
             height: 210px;
             font-family: 'Inter', sans-serif;
@@ -76,43 +76,43 @@
         }
     </style>
 </head>
-<body class="font-sans antialiased text-[#f5f2eb] min-h-screen flex flex-col pb-12 select-none">
+<body class="font-sans antialiased text-[#EAE6DF] min-h-screen flex flex-col pb-12 select-none">
 
     <!-- HEADER ADMIN -->
-    <header class="sticky top-0 z-40 glass-panel border-b border-white/10 px-4 lg:px-8 py-3.5 mb-6">
+    <header class="sticky top-0 z-40 glass-panel border-b border-[#EAE6DF]/15 px-4 lg:px-8 py-3.5 mb-6">
         <div class="max-w-[95rem] mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
             <div class="flex items-center gap-3.5">
-                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-[#c87d4b] via-[#b45309] to-[#78350f] flex items-center justify-center shadow-lg text-white text-2xl font-black shrink-0">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-[#C88B55] via-[#26292E] to-[#1E62B5] flex items-center justify-center shadow-lg text-[#EAE6DF] text-2xl font-black shrink-0 border border-[#EAE6DF]/25">
                     <i class="fa-solid fa-user-shield"></i>
                 </div>
                 <div>
-                    <h1 class="text-lg md:text-xl font-extrabold tracking-wide text-[#e09a68]">
+                    <h1 class="text-lg md:text-xl font-extrabold tracking-wide text-[#D69A63]">
                         Administration des ressources
                     </h1>
-                    <p class="text-sm text-[#e6e1d6] font-medium tracking-wide flex items-center gap-1.5 mt-0.5">
-                        <i class="fa-solid fa-school text-[#e09a68]"></i>
+                    <p class="text-sm text-[#EAE6DF] font-medium tracking-wide flex items-center gap-1.5 mt-0.5">
+                        <i class="fa-solid fa-school text-[#5A9BE6]"></i>
                         <span>Collège Jules Verne - Rivery</span>
                     </p>
                 </div>
             </div>
 
             <div id="adminControls" class="hidden flex flex-wrap items-center gap-3">
-                <button id="btnOpenAddModal" class="vr-btn bg-gradient-to-r from-[#d98a4e] to-[#b45309] text-stone-950 font-bold px-4 py-2.5 rounded-xl flex items-center gap-2 text-sm">
+                <button id="btnOpenAddModal" class="vr-btn bg-gradient-to-r from-[#1E62B5] to-[#2E77D0] text-white font-bold px-4 py-2.5 rounded-xl flex items-center gap-2 text-sm border border-[#EAE6DF]/20">
                     <i class="fa-solid fa-plus"></i>
                     <span>Ajouter un lien</span>
                 </button>
-                <button id="btnOpenCategoryModal" class="vr-btn bg-white/10 hover:bg-white/20 border border-white/20 text-white px-4 py-2.5 rounded-xl flex items-center gap-2 text-sm font-medium">
-                    <i class="fa-solid fa-folder-tree text-[#e09a68]"></i>
+                <button id="btnOpenCategoryModal" class="vr-btn bg-[#EAE6DF]/10 hover:bg-[#EAE6DF]/20 border border-[#EAE6DF]/20 text-[#EAE6DF] px-4 py-2.5 rounded-xl flex items-center gap-2 text-sm font-medium">
+                    <i class="fa-solid fa-folder-tree text-[#D69A63]"></i>
                     <span>Gérer les catégories</span>
                 </button>
-                <a href="index.html" target="_blank" class="vr-btn bg-white/5 hover:bg-white/10 border border-white/15 text-sky-300 px-4 py-2.5 rounded-xl flex items-center gap-2 text-sm font-medium">
-                    <i class="fa-solid fa-eye"></i>
+                <a href="index.html" target="_blank" class="vr-btn bg-[#C88B55]/15 hover:bg-[#C88B55]/25 border border-[#C88B55]/40 text-[#EAE6DF] px-4 py-2.5 rounded-xl flex items-center gap-2 text-sm font-medium">
+                    <i class="fa-solid fa-eye text-[#D69A63]"></i>
                     <span>Aperçu Élèves</span>
                 </a>
                 
                 <!-- Horloge en temps réel -->
-                <div id="liveClock" class="hidden sm:flex items-center justify-center gap-2 bg-white/5 border border-white/10 px-3.5 py-2.5 rounded-xl text-[#e09a68] text-sm font-semibold tracking-wide font-mono min-w-[125px]">
-                    <i class="fa-regular fa-clock"></i>
+                <div id="liveClock" class="hidden sm:flex items-center justify-center gap-2 bg-[#EAE6DF]/5 border border-[#EAE6DF]/15 px-3.5 py-2.5 rounded-xl text-[#EAE6DF] text-sm font-semibold tracking-wide font-mono min-w-[125px]">
+                    <i class="fa-regular fa-clock text-[#5A9BE6]"></i>
                     <span id="clockTime">--:--:--</span>
                 </div>
 
@@ -138,29 +138,29 @@
 
     <!-- FORMULAIRE DE CONNEXION -->
     <div id="authModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-md p-4">
-        <div class="glass-panel w-full max-w-md rounded-3xl p-8 border border-[#c87d4b]/40 shadow-2xl relative text-center">
-            <div class="w-16 h-16 rounded-2xl bg-[#c87d4b]/20 border border-[#c87d4b]/40 text-[#e09a68] text-3xl flex items-center justify-center mx-auto mb-4">
-                <i class="fa-solid fa-key"></i>
+        <div class="glass-panel w-full max-w-md rounded-3xl p-8 border border-[#C88B55]/40 shadow-2xl relative text-center">
+            <div class="w-16 h-16 rounded-2xl bg-[#1E62B5]/25 border border-[#2E77D0]/50 text-[#EAE6DF] text-3xl flex items-center justify-center mx-auto mb-4">
+                <i class="fa-solid fa-key text-[#D69A63]"></i>
             </div>
-            <h3 class="text-xl font-bold text-white mb-1">Administration des ressources</h3>
-            <p class="text-xs text-[#e6e1d6] font-medium tracking-wide flex items-center justify-center gap-1.5 mb-6">
-                <i class="fa-solid fa-school text-[#e09a68]"></i>
+            <h3 class="text-xl font-bold text-[#EAE6DF] mb-1">Administration des ressources</h3>
+            <p class="text-xs text-[#D6CFC4] font-medium tracking-wide flex items-center justify-center gap-1.5 mb-6">
+                <i class="fa-solid fa-school text-[#5A9BE6]"></i>
                 <span>Collège Jules Verne - Rivery</span>
             </p>
             
             <form id="authForm" class="space-y-4 text-left">
                 <div>
-                    <label class="block text-xs font-semibold text-[#e09a68] uppercase mb-1 text-center">Clé API :</label>
+                    <label class="block text-xs font-semibold text-[#D69A63] uppercase mb-1 text-center">Clé API :</label>
                     <div class="relative">
-                        <input type="password" id="inputMasterKey" required placeholder="$2a$10$..." class="w-full pl-4 pr-12 py-3 rounded-xl bg-white/5 border border-white/15 text-white text-sm focus:outline-none focus:border-[#d98a4e]">
-                        <button type="button" id="toggleMasterKey" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-stone-400 hover:text-white">
+                        <input type="password" id="inputMasterKey" required placeholder="$2a$10$..." class="w-full pl-4 pr-12 py-3 rounded-xl bg-[#14161A]/80 border border-[#EAE6DF]/15 text-[#EAE6DF] text-sm focus:outline-none focus:border-[#2E77D0]">
+                        <button type="button" id="toggleMasterKey" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-[#B8B0A4] hover:text-white">
                             <i class="fa-solid fa-eye text-sm"></i>
                         </button>
                     </div>
                 </div>
 
                 <div class="pt-2">
-                    <button type="submit" class="vr-btn w-full py-3 bg-[#d98a4e] text-stone-950 font-bold rounded-xl text-sm shadow-lg">Connexion</button>
+                    <button type="submit" class="vr-btn w-full py-3 bg-gradient-to-r from-[#1E62B5] to-[#2E77D0] text-white font-bold rounded-xl text-sm shadow-lg border border-[#EAE6DF]/20">Connexion</button>
                 </div>
             </form>
         </div>
@@ -168,58 +168,58 @@
 
     <!-- MODAL AJOUT / ÉDITION DE LIEN -->
     <div id="bookmarkModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md hidden p-4">
-        <div class="glass-panel w-full max-w-xl rounded-3xl p-5 border border-white/20 shadow-2xl relative overflow-hidden">
+        <div class="glass-panel w-full max-w-xl rounded-3xl p-5 border border-[#EAE6DF]/20 shadow-2xl relative overflow-hidden">
             <div class="flex justify-between items-center mb-3">
-                <h3 id="modalTitle" class="text-lg font-bold text-white flex items-center gap-2">
-                    <i class="fa-solid fa-bookmark text-[#e09a68]"></i>
+                <h3 id="modalTitle" class="text-lg font-bold text-[#EAE6DF] flex items-center gap-2">
+                    <i class="fa-solid fa-bookmark text-[#D69A63]"></i>
                     <span>Ajouter un lien éducatif</span>
                 </h3>
-                <button class="closeBookmarkModal vr-btn text-stone-400 hover:text-white p-1 text-base"><i class="fa-solid fa-xmark"></i></button>
+                <button class="closeBookmarkModal vr-btn text-[#B8B0A4] hover:text-white p-1 text-base"><i class="fa-solid fa-xmark"></i></button>
             </div>
             <form id="bookmarkForm" class="space-y-2.5">
                 <input type="hidden" id="bookmarkId">
                 <div>
-                    <label class="block text-[11px] font-semibold text-[#e6e1d6] uppercase mb-0.5">Titre *</label>
-                    <input type="text" id="inputTitle" required class="w-full px-3 py-2 rounded-xl bg-white/5 border border-white/15 text-white text-xs">
+                    <label class="block text-[11px] font-semibold text-[#D6CFC4] uppercase mb-0.5">Titre *</label>
+                    <input type="text" id="inputTitle" required class="w-full px-3 py-2 rounded-xl bg-[#14161A]/70 border border-[#EAE6DF]/15 text-[#EAE6DF] text-xs">
                 </div>
                 <div>
-                    <label class="block text-[11px] font-semibold text-[#e6e1d6] uppercase mb-0.5">URL *</label>
-                    <input type="url" id="inputUrl" required class="w-full px-3 py-2 rounded-xl bg-white/5 border border-white/15 text-white text-xs">
+                    <label class="block text-[11px] font-semibold text-[#D6CFC4] uppercase mb-0.5">URL *</label>
+                    <input type="url" id="inputUrl" required class="w-full px-3 py-2 rounded-xl bg-[#14161A]/70 border border-[#EAE6DF]/15 text-[#EAE6DF] text-xs">
                 </div>
                 
                 <!-- Catégorie avec création rapide -->
                 <div>
-                    <label class="block text-[11px] font-semibold text-[#e6e1d6] uppercase mb-0.5">Catégorie</label>
+                    <label class="block text-[11px] font-semibold text-[#D6CFC4] uppercase mb-0.5">Catégorie</label>
                     <div class="flex gap-2">
-                        <select id="inputCategory" class="flex-1 px-3 py-2 rounded-xl bg-stone-900 border border-white/15 text-white text-xs"></select>
-                        <button type="button" id="btnToggleQuickCat" class="vr-btn px-3 py-2 rounded-xl bg-white/10 hover:bg-white/20 border border-white/15 text-[#e09a68] font-bold text-xs" title="Créer une nouvelle catégorie">
+                        <select id="inputCategory" class="flex-1 px-3 py-2 rounded-xl bg-[#1C1F25] border border-[#EAE6DF]/15 text-[#EAE6DF] text-xs"></select>
+                        <button type="button" id="btnToggleQuickCat" class="vr-btn px-3 py-2 rounded-xl bg-[#EAE6DF]/10 hover:bg-[#EAE6DF]/20 border border-[#EAE6DF]/15 text-[#D69A63] font-bold text-xs" title="Créer une nouvelle catégorie">
                             <i class="fa-solid fa-plus"></i>
                         </button>
                     </div>
                     <div id="quickCatContainer" class="hidden mt-1.5 flex gap-2">
-                        <input type="text" id="quickCatInput" placeholder="Nom de la nouvelle catégorie..." class="flex-1 px-3 py-1.5 rounded-xl bg-white/5 border border-[#c87d4b]/40 text-white text-xs focus:outline-none">
-                        <button type="button" id="btnSaveQuickCat" class="vr-btn px-3 py-1.5 rounded-xl bg-[#d98a4e] text-stone-950 font-bold text-xs">Ajouter</button>
+                        <input type="text" id="quickCatInput" placeholder="Nom de la nouvelle catégorie..." class="flex-1 px-3 py-1.5 rounded-xl bg-[#14161A]/70 border border-[#2E77D0]/50 text-[#EAE6DF] text-xs focus:outline-none">
+                        <button type="button" id="btnSaveQuickCat" class="vr-btn px-3 py-1.5 rounded-xl bg-[#1E62B5] text-white font-bold text-xs">Ajouter</button>
                     </div>
                 </div>
 
                 <!-- Sélecteur d'émojis officiel (210px) -->
                 <div>
                     <div class="flex items-center justify-between mb-0.5">
-                        <label class="block text-[11px] font-semibold text-[#e6e1d6] uppercase">Icône (Emoji)</label>
-                        <input type="text" id="inputIcon" placeholder="🚀" class="w-12 text-center bg-white/5 border border-white/15 text-white text-xs rounded-lg py-0.5" readonly>
+                        <label class="block text-[11px] font-semibold text-[#D6CFC4] uppercase">Icône (Emoji)</label>
+                        <input type="text" id="inputIcon" placeholder="🚀" class="w-12 text-center bg-[#14161A]/70 border border-[#EAE6DF]/15 text-[#EAE6DF] text-xs rounded-lg py-0.5" readonly>
                     </div>
-                    <div class="border border-white/10 rounded-xl overflow-hidden">
+                    <div class="border border-[#EAE6DF]/15 rounded-xl overflow-hidden">
                         <emoji-picker id="emojiPickerElement"></emoji-picker>
                     </div>
                 </div>
 
                 <div>
-                    <label class="block text-[11px] font-semibold text-[#e6e1d6] uppercase mb-0.5">Description</label>
-                    <textarea id="inputDescription" rows="1" class="w-full px-3 py-1.5 rounded-xl bg-white/5 border border-white/15 text-white text-xs resize-none"></textarea>
+                    <label class="block text-[11px] font-semibold text-[#D6CFC4] uppercase mb-0.5">Description</label>
+                    <textarea id="inputDescription" rows="1" class="w-full px-3 py-1.5 rounded-xl bg-[#14161A]/70 border border-[#EAE6DF]/15 text-[#EAE6DF] text-xs resize-none"></textarea>
                 </div>
                 <div class="pt-1.5 flex justify-end gap-2">
-                    <button type="button" class="closeBookmarkModal vr-btn px-4 py-2 rounded-xl bg-white/5 text-stone-300 text-xs">Annuler</button>
-                    <button type="submit" class="vr-btn px-5 py-2 rounded-xl bg-gradient-to-r from-[#d98a4e] to-[#b45309] text-stone-950 font-bold text-xs">Enregistrer</button>
+                    <button type="button" class="closeBookmarkModal vr-btn px-4 py-2 rounded-xl bg-[#EAE6DF]/10 text-[#D6CFC4] text-xs">Annuler</button>
+                    <button type="submit" class="vr-btn px-5 py-2 rounded-xl bg-gradient-to-r from-[#1E62B5] to-[#2E77D0] text-white font-bold text-xs">Enregistrer</button>
                 </div>
             </form>
         </div>
@@ -227,37 +227,37 @@
 
     <!-- MODAL GESTION DES CATÉGORIES -->
     <div id="categoryModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md hidden p-4">
-        <div class="glass-panel w-full max-w-md rounded-3xl p-6 border border-white/20 shadow-2xl relative">
+        <div class="glass-panel w-full max-w-md rounded-3xl p-6 border border-[#EAE6DF]/20 shadow-2xl relative">
             <div class="flex justify-between items-center mb-6">
-                <h3 class="text-xl font-bold text-white flex items-center gap-2">
-                    <i class="fa-solid fa-folder-tree text-[#e09a68]"></i>
+                <h3 class="text-xl font-bold text-[#EAE6DF] flex items-center gap-2">
+                    <i class="fa-solid fa-folder-tree text-[#D69A63]"></i>
                     <span>Gérer les catégories</span>
                 </h3>
-                <button class="closeCategoryModal vr-btn text-stone-400 hover:text-white p-2 text-lg"><i class="fa-solid fa-xmark"></i></button>
+                <button class="closeCategoryModal vr-btn text-[#B8B0A4] hover:text-white p-2 text-lg"><i class="fa-solid fa-xmark"></i></button>
             </div>
             
             <div class="mb-5">
-                <label class="block text-xs font-semibold text-[#e6e1d6] uppercase mb-2">Ajouter une nouvelle catégorie</label>
+                <label class="block text-xs font-semibold text-[#D6CFC4] uppercase mb-2">Ajouter une nouvelle catégorie</label>
                 <div class="flex gap-2">
-                    <input type="text" id="newCategoryInput" placeholder="Ex: Géographie..." class="flex-1 px-4 py-2.5 rounded-xl bg-white/5 border border-white/15 text-white text-sm focus:outline-none focus:border-[#d98a4e]">
-                    <button type="button" id="btnAddCategory" class="vr-btn px-4 py-2.5 rounded-xl bg-[#d98a4e] text-stone-950 font-bold text-sm">Ajouter</button>
+                    <input type="text" id="newCategoryInput" placeholder="Ex: Géographie..." class="flex-1 px-4 py-2.5 rounded-xl bg-[#14161A]/70 border border-[#EAE6DF]/15 text-[#EAE6DF] text-sm focus:outline-none focus:border-[#2E77D0]">
+                    <button type="button" id="btnAddCategory" class="vr-btn px-4 py-2.5 rounded-xl bg-[#1E62B5] text-white font-bold text-sm">Ajouter</button>
                 </div>
             </div>
 
             <div>
-                <label class="block text-xs font-semibold text-[#e6e1d6] uppercase mb-2">Catégories existantes (Renommer ou Supprimer)</label>
+                <label class="block text-xs font-semibold text-[#D6CFC4] uppercase mb-2">Catégories existantes (Renommer ou Supprimer)</label>
                 <div id="categoryManageList" class="max-h-60 overflow-y-auto space-y-2 pr-1"></div>
             </div>
 
-            <div class="pt-5 mt-4 border-t border-white/10 flex justify-end">
-                <button type="button" class="closeCategoryModal vr-btn px-5 py-2 rounded-xl bg-white/10 text-white text-sm font-medium">Fermer</button>
+            <div class="pt-5 mt-4 border-t border-[#EAE6DF]/10 flex justify-end">
+                <button type="button" class="closeCategoryModal vr-btn px-5 py-2 rounded-xl bg-[#EAE6DF]/10 text-[#EAE6DF] text-sm font-medium">Fermer</button>
             </div>
         </div>
     </div>
 
     <!-- TOAST -->
-    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 glass-panel px-5 py-3 rounded-2xl border border-[#c87d4b]/40 text-white flex items-center gap-3 shadow-xl pointer-events-none">
-        <i id="toastIcon" class="fa-solid fa-circle-check text-[#e09a68] text-lg"></i>
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 glass-panel px-5 py-3 rounded-2xl border border-[#2E77D0]/50 text-[#EAE6DF] flex items-center gap-3 shadow-xl pointer-events-none">
+        <i id="toastIcon" class="fa-solid fa-circle-check text-[#D69A63] text-lg"></i>
         <span id="toastMessage" class="text-sm font-medium">Message</span>
     </div>
 
@@ -399,7 +399,7 @@
             sortedCategories.forEach(cat => {
                 const btn = document.createElement('button');
                 const isActive = (cat === currentCategory);
-                btn.className = `vr-btn px-5 py-2.5 rounded-2xl text-xs font-bold transition-all border ${isActive ? 'bg-gradient-to-r from-[#d98a4e] to-[#b45309] text-stone-950 border-amber-200/40 font-black shadow-lg' : 'bg-white/5 text-[#d6d1c4] border-white/10'}`;
+                btn.className = `vr-btn px-5 py-2.5 rounded-2xl text-xs font-bold transition-all border ${isActive ? 'bg-gradient-to-r from-[#1E62B5] to-[#C88B55] text-white border-[#EAE6DF]/50 font-black shadow-lg' : 'bg-[#EAE6DF]/5 text-[#D6CFC4] border-[#EAE6DF]/12'}`;
                 btn.innerHTML = `<span>${escapeHTML(cat)}</span>`;
                 btn.addEventListener('click', () => {
                     currentCategory = cat;
@@ -431,23 +431,23 @@
             const sortedCategories = categories.filter(c => c !== 'Toutes').sort((a, b) => a.localeCompare(b, 'fr', { sensitivity: 'base' }));
 
             if (sortedCategories.length === 0) {
-                categoryManageList.innerHTML = `<p class="text-xs text-stone-400 italic py-2">Aucune catégorie personnalisée.</p>`;
+                categoryManageList.innerHTML = `<p class="text-xs text-[#B8B0A4] italic py-2">Aucune catégorie personnalisée.</p>`;
                 return;
             }
 
             sortedCategories.forEach(cat => {
                 const row = document.createElement('div');
-                row.className = 'flex items-center justify-between gap-2 bg-white/5 border border-white/10 px-3.5 py-2 rounded-xl';
+                row.className = 'flex items-center justify-between gap-2 bg-[#EAE6DF]/5 border border-[#EAE6DF]/10 px-3.5 py-2 rounded-xl';
                 
                 if (editingCategoryName === cat) {
                     // Mode édition du nom de la catégorie
                     row.innerHTML = `
-                        <input type="text" id="renameCatInput" value="${escapeHTML(cat)}" class="flex-1 px-2.5 py-1 rounded-lg bg-black/40 border border-[#d98a4e] text-white text-sm focus:outline-none">
+                        <input type="text" id="renameCatInput" value="${escapeHTML(cat)}" class="flex-1 px-2.5 py-1 rounded-lg bg-black/40 border border-[#2E77D0] text-[#EAE6DF] text-sm focus:outline-none">
                         <div class="flex items-center gap-1.5 shrink-0">
                             <button type="button" onclick="confirmRenameCategory('${cat.replace(/'/g, "\\'")}')" class="vr-btn text-emerald-400 hover:text-emerald-300 bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/30 px-2.5 py-1.5 rounded-lg text-xs" title="Valider le nouveau nom">
                                 <i class="fa-solid fa-check"></i>
                             </button>
-                            <button type="button" onclick="cancelRenameCategory()" class="vr-btn text-stone-400 hover:text-white bg-white/5 hover:bg-white/15 border border-white/10 px-2.5 py-1.5 rounded-lg text-xs" title="Annuler">
+                            <button type="button" onclick="cancelRenameCategory()" class="vr-btn text-[#B8B0A4] hover:text-white bg-white/5 hover:bg-white/15 border border-white/10 px-2.5 py-1.5 rounded-lg text-xs" title="Annuler">
                                 <i class="fa-solid fa-xmark"></i>
                             </button>
                         </div>
@@ -455,9 +455,9 @@
                 } else {
                     // Affichage normal avec boutons Renommer et Supprimer
                     row.innerHTML = `
-                        <span class="text-sm text-white font-medium truncate">${escapeHTML(cat)}</span>
+                        <span class="text-sm text-[#EAE6DF] font-medium truncate">${escapeHTML(cat)}</span>
                         <div class="flex items-center gap-1.5 shrink-0">
-                            <button type="button" onclick="startRenameCategory('${cat.replace(/'/g, "\\'")}')" class="vr-btn text-[#e09a68] hover:text-amber-300 bg-[#c87d4b]/10 hover:bg-[#c87d4b]/20 border border-[#c87d4b]/25 px-2.5 py-1.5 rounded-lg text-xs" title="Renommer cette catégorie">
+                            <button type="button" onclick="startRenameCategory('${cat.replace(/'/g, "\\'")}')" class="vr-btn text-[#D69A63] hover:text-[#EAE6DF] bg-[#C88B55]/15 hover:bg-[#C88B55]/25 border border-[#C88B55]/30 px-2.5 py-1.5 rounded-lg text-xs" title="Renommer cette catégorie">
                                 <i class="fa-solid fa-pen"></i>
                             </button>
                             <button type="button" onclick="deleteCategory('${cat.replace(/'/g, "\\'")}')" class="vr-btn text-red-400 hover:text-red-300 bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 px-2.5 py-1.5 rounded-lg text-xs" title="Supprimer cette catégorie">
@@ -566,25 +566,25 @@
                 card.addEventListener('dragend', handleDragEnd);
 
                 let iconHTML = `<span class="text-2xl">${item.icon || '🌐'}</span>`;
-                if (item.icon && item.icon.startsWith('fa-')) iconHTML = `<i class="fa-brands ${item.icon} text-2xl text-[#e09a68]"></i>`;
+                if (item.icon && item.icon.startsWith('fa-')) iconHTML = `<i class="fa-brands ${item.icon} text-2xl text-[#D69A63]"></i>`;
 
                 card.innerHTML = `
                     <div>
                         <div class="flex items-start justify-between gap-2 mb-3">
-                            <div class="w-11 h-11 rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center shrink-0">${iconHTML}</div>
-                            <span class="text-[10px] font-bold px-2.5 py-1 rounded-xl bg-[#c87d4b]/15 border border-[#c87d4b]/25 text-[#e09a68] line-clamp-2 leading-tight text-right">${escapeHTML(item.category)}</span>
+                            <div class="w-11 h-11 rounded-2xl bg-[#EAE6DF]/10 border border-[#EAE6DF]/15 flex items-center justify-center shrink-0">${iconHTML}</div>
+                            <span class="text-[10px] font-bold px-2.5 py-1 rounded-xl bg-[#1E62B5]/25 border border-[#2E77D0]/40 text-[#EAE6DF] line-clamp-2 leading-tight text-right">${escapeHTML(item.category)}</span>
                         </div>
-                        <h3 class="text-sm font-bold text-white text-center mb-1.5 line-clamp-2 leading-snug min-h-[2.5rem]" title="${escapeHTML(item.title)}">${escapeHTML(item.title)}</h3>
-                        <p class="text-stone-400 text-[11px] text-center leading-relaxed line-clamp-2 mb-3">${escapeHTML(item.description || '')}</p>
+                        <h3 class="text-sm font-bold text-[#EAE6DF] text-center mb-1.5 line-clamp-2 leading-snug min-h-[2.5rem]" title="${escapeHTML(item.title)}">${escapeHTML(item.title)}</h3>
+                        <p class="text-[#B8B0A4] text-[11px] text-center leading-relaxed line-clamp-2 mb-3">${escapeHTML(item.description || '')}</p>
                     </div>
-                    <div class="flex items-center justify-between gap-1.5 pt-2.5 border-t border-white/5">
-                        <div class="flex-1 bg-white/5 text-stone-400 hover:text-[#e09a68] py-2 rounded-lg text-xs border border-white/10 flex items-center justify-center cursor-grab" title="Glisser pour réorganiser">
+                    <div class="flex items-center justify-between gap-1.5 pt-2.5 border-t border-[#EAE6DF]/10">
+                        <div class="flex-1 bg-[#EAE6DF]/5 text-[#B8B0A4] hover:text-[#EAE6DF] py-2 rounded-lg text-xs border border-[#EAE6DF]/10 flex items-center justify-center cursor-grab" title="Glisser pour réorganiser">
                             <i class="fa-solid fa-grip-vertical"></i>
                         </div>
-                        <a href="${escapeHTML(item.url)}" target="_blank" rel="noopener noreferrer" class="vr-btn flex-1 bg-sky-500/10 hover:bg-sky-500/20 text-sky-400 py-2 rounded-lg text-xs border border-sky-500/20 flex items-center justify-center" title="Ouvrir la ressource">
+                        <a href="${escapeHTML(item.url)}" target="_blank" rel="noopener noreferrer" class="vr-btn flex-1 bg-[#1E62B5]/20 hover:bg-[#1E62B5]/35 text-[#6BA6EB] py-2 rounded-lg text-xs border border-[#2E77D0]/35 flex items-center justify-center" title="Ouvrir la ressource">
                             <i class="fa-solid fa-arrow-up-right-from-square"></i>
                         </a>
-                        <button onclick="editBookmark('${item.id}')" class="vr-btn flex-1 bg-white/5 hover:bg-white/15 text-[#e09a68] py-2 rounded-lg text-xs border border-white/10 flex items-center justify-center" title="Modifier">
+                        <button onclick="editBookmark('${item.id}')" class="vr-btn flex-1 bg-[#C88B55]/15 hover:bg-[#C88B55]/25 text-[#D69A63] py-2 rounded-lg text-xs border border-[#C88B55]/30 flex items-center justify-center" title="Modifier">
                             <i class="fa-solid fa-pen"></i>
                         </button>
                         <button onclick="deleteBookmark('${item.id}')" class="vr-btn flex-1 bg-red-500/10 hover:bg-red-500/20 text-red-400 py-2 rounded-lg text-xs border border-red-500/20 flex items-center justify-center" title="Supprimer">
@@ -600,7 +600,7 @@
         function handleDragStart(e) {
             draggedIndex = parseInt(this.dataset.index);
             e.dataTransfer.effectAllowed = 'move';
-            this.classList.add('opacity-40', 'border-[#d98a4e]');
+            this.classList.add('opacity-40', 'border-[#2E77D0]');
         }
 
         function handleDragOver(e) {
@@ -610,17 +610,17 @@
         }
 
         function handleDragEnter(e) {
-            this.classList.add('border-[#d98a4e]', 'scale-[1.01]');
+            this.classList.add('border-[#2E77D0]', 'scale-[1.01]');
         }
 
         function handleDragLeave(e) {
-            this.classList.remove('border-[#d98a4e]', 'scale-[1.01]');
+            this.classList.remove('border-[#2E77D0]', 'scale-[1.01]');
         }
 
         async function handleDrop(e) {
             e.stopPropagation();
             e.preventDefault();
-            this.classList.remove('border-[#d98a4e]', 'scale-[1.01]');
+            this.classList.remove('border-[#2E77D0]', 'scale-[1.01]');
 
             const targetIndex = parseInt(this.dataset.index);
             if (draggedIndex !== null && draggedIndex !== targetIndex) {
@@ -634,9 +634,9 @@
         }
 
         function handleDragEnd(e) {
-            this.classList.remove('opacity-40', 'border-[#d98a4e]');
+            this.classList.remove('opacity-40', 'border-[#2E77D0]');
             document.querySelectorAll('#bookmarkGrid > div').forEach(card => {
-                card.classList.remove('border-[#d98a4e]', 'scale-[1.01]');
+                card.classList.remove('border-[#2E77D0]', 'scale-[1.01]');
             });
         }
 
