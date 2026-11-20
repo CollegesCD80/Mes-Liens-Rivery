@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,13 +13,14 @@
     
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     fontFamily: { sans: ['Inter', 'sans-serif'] },
                     colors: {
                         quest: {
-                            blue: '#1D4ED8', purple: '#0F766E', cyan: '#EA7B52',
-                            dark: '#F6F7F9', panel: 'rgba(255, 255, 255, 0.88)', card: 'rgba(255, 255, 255, 0.92)'
+                            blue: '#1E62B5', purple: '#C88B55', cyan: '#EAE6DF',
+                            dark: '#14161A', panel: 'rgba(28, 31, 37, 0.86)', card: 'rgba(234, 230, 223, 0.045)'
                         }
                     }
                 }
@@ -29,27 +30,27 @@
 
     <style>
         body {
-            background-color: #F6F7F9;
+            background-color: #14161A;
             background-image: 
-                radial-gradient(at 15% 15%, rgba(29, 78, 216, 0.08) 0px, transparent 55%),
-                radial-gradient(at 85% 20%, rgba(15, 118, 110, 0.08) 0px, transparent 55%),
-                radial-gradient(at 50% 88%, rgba(234, 123, 82, 0.07) 0px, transparent 55%);
+                radial-gradient(at 15% 15%, rgba(200, 139, 85, 0.24) 0px, transparent 52%),
+                radial-gradient(at 85% 20%, rgba(30, 98, 181, 0.24) 0px, transparent 52%),
+                radial-gradient(at 50% 88%, rgba(234, 230, 223, 0.08) 0px, transparent 55%);
             background-attachment: fixed;
             min-height: 100vh;
-            color: #1E293B;
+            color: #EAE6DF;
         }
         .glass-panel {
-            background: rgba(255, 255, 255, 0.88);
+            background: rgba(28, 31, 37, 0.86);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(15, 118, 110, 0.14);
-            box-shadow: 0 8px 30px -10px rgba(15, 23, 42, 0.08);
+            border: 1px solid rgba(234, 230, 223, 0.14);
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.6);
         }
         .glass-card {
-            background: rgba(255, 255, 255, 0.92);
+            background: rgba(234, 230, 223, 0.045);
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
-            border: 1px solid rgba(29, 78, 216, 0.12);
+            border: 1px solid rgba(234, 230, 223, 0.11);
             transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
             text-decoration: none;
             display: flex;
@@ -58,73 +59,73 @@
             outline: none;
         }
         .glass-card:hover {
-            background: #FFFFFF;
-            border-color: #EA7B52;
+            background: rgba(234, 230, 223, 0.09);
+            border-color: rgba(214, 154, 99, 0.65);
             transform: translateY(-4px) scale(1.01);
-            box-shadow: 0 12px 28px -6px rgba(234, 123, 82, 0.25);
+            box-shadow: 0 12px 30px -5px rgba(214, 154, 99, 0.3);
         }
         .vr-btn { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
         .vr-btn:active { transform: scale(0.95); }
 
         /* Style des boutons de catégories sans dégradé et sans ombre */
         .category-btn {
-            background-color: #FFFFFF;
-            border: 1px solid rgba(15, 118, 110, 0.2);
+            background: rgba(234, 230, 223, 0.05);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(234, 230, 223, 0.12);
             transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .category-btn:hover {
-            background-color: #FFF7F4;
-            border-color: #EA7B52;
-            color: #C25934;
+            background: rgba(234, 230, 223, 0.11);
+            border-color: rgba(214, 154, 99, 0.65);
         }
         .category-btn.active {
-            background-color: #EA7B52;
-            border-color: #C25934;
-            color: #FFFFFF;
-            font-weight: 800;
+            background: #C88B55;
+            border-color: rgba(234, 230, 223, 0.6);
+            color: #0c0a09;
+            font-weight: 900;
         }
     </style>
 </head>
-<body class="font-sans antialiased text-slate-800 min-h-screen flex flex-col pb-12 select-none">
+<body class="font-sans antialiased text-[#EAE6DF] min-h-screen flex flex-col pb-12 select-none">
 
     <!-- TOP HEADER -->
-    <header class="sticky top-0 z-40 glass-panel border-b border-slate-200 px-4 lg:px-8 py-3.5 mb-6">
+    <header class="sticky top-0 z-40 glass-panel border-b border-[#EAE6DF]/15 px-4 lg:px-8 py-3.5 mb-6">
         <div class="max-w-[95rem] mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
             <div class="flex items-center gap-3.5 w-full md:w-auto justify-between md:justify-start">
                 <div class="flex items-center gap-3.5">
-                    <div class="w-12 h-12 rounded-2xl bg-[#1D4ED8] flex items-center justify-center shadow-sm text-white text-2xl font-black shrink-0 border border-[#0F766E]/30">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-[#C88B55] via-[#26292E] to-[#1E62B5] flex items-center justify-center shadow-lg text-[#EAE6DF] text-2xl font-black shrink-0 border border-[#EAE6DF]/25">
                         <i class="fa-solid fa-vr-cardboard"></i>
                     </div>
                     <div>
-                        <h1 class="text-lg md:text-xl font-extrabold tracking-wide text-[#1D4ED8]">
+                        <h1 class="text-lg md:text-xl font-extrabold tracking-wide text-[#D69A63]">
                             Espace Ressources élèves
                         </h1>
-                        <p class="text-sm text-[#0F766E] font-semibold tracking-wide flex items-center gap-1.5 mt-0.5">
-                            <i class="fa-solid fa-school text-[#EA7B52]"></i>
+                        <p class="text-sm text-[#EAE6DF] font-medium tracking-wide flex items-center gap-1.5 mt-0.5">
+                            <i class="fa-solid fa-school text-[#5A9BE6]"></i>
                             <span>Collège Jules Verne - Rivery</span>
                         </p>
                     </div>
                 </div>
-                <div id="vr-clock-mobile" class="text-xs font-mono bg-slate-100 border border-slate-200 px-3 py-1.5 rounded-xl text-[#0F766E] font-semibold md:hidden flex items-center gap-1.5 min-w-[110px] justify-center">
-                    <i class="fa-regular fa-clock text-[#EA7B52]"></i>
+                <div id="vr-clock-mobile" class="text-xs font-mono bg-[#EAE6DF]/5 border border-[#EAE6DF]/15 px-3 py-1.5 rounded-xl text-[#EAE6DF] md:hidden flex items-center gap-1.5 min-w-[110px] justify-center">
+                    <i class="fa-regular fa-clock text-[#5A9BE6]"></i>
                     <span class="clock-text">--:--:--</span>
                 </div>
             </div>
 
             <!-- Search Bar -->
             <div class="relative w-full md:w-96">
-                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 text-lg">
+                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-[#B8B0A4] text-lg">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
-                <input type="text" id="searchInput" placeholder="Rechercher une ressource..." class="w-full pl-12 pr-10 py-3 rounded-2xl bg-white border border-slate-300 text-slate-800 placeholder-slate-400 text-base focus:outline-none focus:border-[#0F766E]">
-                <button id="clearSearch" class="hidden absolute inset-y-0 right-0 pr-4 flex items-center text-slate-400 hover:text-slate-700">
+                <input type="text" id="searchInput" placeholder="Rechercher une ressource..." class="w-full pl-12 pr-10 py-3 rounded-2xl bg-[#14161A]/75 border border-[#EAE6DF]/15 text-[#EAE6DF] placeholder-[#B8B0A4] text-base focus:outline-none focus:border-[#2E77D0]">
+                <button id="clearSearch" class="hidden absolute inset-y-0 right-0 pr-4 flex items-center text-[#B8B0A4] hover:text-white">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
 
             <div class="flex items-center gap-3 w-full md:w-auto justify-end">
-                <div id="vr-clock-desktop" class="hidden md:flex text-xs font-mono bg-slate-100 border border-slate-200 px-3.5 py-2.5 rounded-xl text-[#0F766E] font-semibold items-center gap-2 min-w-[125px] justify-center">
-                    <i class="fa-regular fa-clock text-[#EA7B52]"></i>
+                <div id="vr-clock-desktop" class="hidden md:flex text-xs font-mono bg-[#EAE6DF]/5 border border-[#EAE6DF]/15 px-3.5 py-2.5 rounded-xl text-[#EAE6DF] items-center gap-2 min-w-[125px] justify-center">
+                    <i class="fa-regular fa-clock text-[#5A9BE6]"></i>
                     <span class="clock-text">--:--:--</span>
                 </div>
             </div>
@@ -142,8 +143,8 @@
         <section class="flex-1">
             <div id="bookmarkGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4 justify-items-center"></div>
             <div id="emptyState" class="hidden flex-col items-center justify-center py-16 text-center glass-panel rounded-3xl mt-4">
-                <h3 class="text-xl font-bold text-slate-800 mb-1">Aucune ressource trouvée</h3>
-                <button id="btnResetFilters" class="vr-btn mt-4 px-5 py-2.5 bg-[#EA7B52] text-white border border-[#C25934] rounded-xl text-sm font-semibold">
+                <h3 class="text-xl font-bold text-[#EAE6DF] mb-1">Aucune ressource trouvée</h3>
+                <button id="btnResetFilters" class="vr-btn mt-4 px-5 py-2.5 bg-[#1E62B5]/25 text-[#EAE6DF] border border-[#2E77D0]/40 rounded-xl text-sm font-semibold">
                     Réinitialiser les filtres
                 </button>
             </div>
@@ -222,7 +223,7 @@
             sortedCategories.forEach(cat => {
                 const btn = document.createElement('button');
                 const isActive = (cat === currentCategory);
-                btn.className = `vr-btn px-5 py-2.5 rounded-2xl text-xs font-bold transition-all category-btn ${isActive ? 'active' : 'text-slate-700'}`;
+                btn.className = `vr-btn px-5 py-2.5 rounded-2xl text-xs font-bold transition-all category-btn ${isActive ? 'active' : 'text-[#D6CFC4]'}`;
                 btn.innerHTML = `<span>${escapeHTML(cat)}</span>`;
                 btn.addEventListener('click', () => {
                     currentCategory = cat;
@@ -252,16 +253,16 @@
                 card.className = 'glass-card rounded-3xl p-4 relative w-full';
                 
                 let iconHTML = `<span class="text-2xl">${item.icon || '🌐'}</span>`;
-                if (item.icon && item.icon.startsWith('fa-')) iconHTML = `<i class="fa-brands ${item.icon} text-2xl text-[#1D4ED8]"></i>`;
+                if (item.icon && item.icon.startsWith('fa-')) iconHTML = `<i class="fa-brands ${item.icon} text-2xl text-[#D69A63]"></i>`;
 
                 card.innerHTML = `
                     <div>
                         <div class="flex items-start justify-between gap-2 mb-3">
-                            <div class="w-11 h-11 rounded-2xl bg-[#0F766E]/10 border border-[#0F766E]/20 flex items-center justify-center shrink-0">${iconHTML}</div>
-                            <span class="text-[10px] font-bold px-2.5 py-1 rounded-xl bg-[#1D4ED8]/10 border border-[#1D4ED8]/20 text-[#1D4ED8] line-clamp-2 leading-tight text-right">${escapeHTML(item.category)}</span>
+                            <div class="w-11 h-11 rounded-2xl bg-[#EAE6DF]/10 border border-[#EAE6DF]/15 flex items-center justify-center shrink-0">${iconHTML}</div>
+                            <span class="text-[10px] font-bold px-2.5 py-1 rounded-xl bg-[#1E62B5]/25 border border-[#2E77D0]/40 text-[#EAE6DF] line-clamp-2 leading-tight text-right">${escapeHTML(item.category)}</span>
                         </div>
-                        <h3 class="text-sm font-bold text-slate-900 text-center mb-1.5 line-clamp-2 leading-snug min-h-[2.5rem]" title="${escapeHTML(item.title)}">${escapeHTML(item.title)}</h3>
-                        <p class="text-slate-600 text-[11px] text-center leading-relaxed line-clamp-2 mb-2">${escapeHTML(item.description || '')}</p>
+                        <h3 class="text-sm font-bold text-[#EAE6DF] text-center mb-1.5 line-clamp-2 leading-snug min-h-[2.5rem]" title="${escapeHTML(item.title)}">${escapeHTML(item.title)}</h3>
+                        <p class="text-[#B8B0A4] text-[11px] text-center leading-relaxed line-clamp-2 mb-2">${escapeHTML(item.description || '')}</p>
                     </div>
                 `;
                 bookmarkGrid.appendChild(card);
