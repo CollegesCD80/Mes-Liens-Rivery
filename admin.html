@@ -399,7 +399,7 @@
             sortedCategories.forEach(cat => {
                 const btn = document.createElement('button');
                 const isActive = (cat === currentCategory);
-                btn.className = `vr-btn px-5 py-2.5 rounded-2xl text-xs font-bold transition-all border ${isActive ? 'bg-gradient-to-r from-[#1E62B5] to-[#C88B55] text-white border-[#EAE6DF]/50 font-black shadow-lg' : 'bg-[#EAE6DF]/5 text-[#D6CFC4] border-[#EAE6DF]/12'}`;
+                btn.className = `vr-btn px-5 py-2.5 rounded-2xl text-xs font-bold transition-all border ${isActive ? 'bg-[#C88B55] text-stone-950 border-[#EAE6DF]/60 font-black' : 'bg-[#EAE6DF]/5 text-[#D6CFC4] border-[#EAE6DF]/12'}`;
                 btn.innerHTML = `<span>${escapeHTML(cat)}</span>`;
                 btn.addEventListener('click', () => {
                     currentCategory = cat;
